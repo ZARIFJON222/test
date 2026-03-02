@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+  </head>
+
+  <body
+    style="
+      background-color: #0d0714;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    "
+  >
+    <div style="width: 420px">
+      <div style="display: flex; gap: 10px; margin-bottom: 45px">
+        <input
+          id="taskInput"
+          type="text"
+          placeholder="Add a new task"
+          style="
+            flex: 1;
+            background: transparent;
+            border: 1px solid #3e1671;
+            border-radius: 10px;
+            padding: 12px 15px;
+            color: #9e78cf;
+            outline: none;
+            font-size: 15px;
+          "
+        />
+        <button
+          onclick="addTask()"
+          style="
+            background-color: #9e78cf;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+            font-size: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          +
+        </button>
+      </div>
+      <h3
+        style="
+          color: #3e1671;
+          font-size: 16px;
+          font-weight: 400;
+          margin-bottom: 20px;
+        "
+      >
+        Tasks to do - <span id="todoCount">0</span>
+      </h3>
+      <div id="todoList"></div>
+      <h3
+        style="
+          color: #3e1671;
+          font-size: 16px;
+          font-weight: 400;
+          margin-bottom: 20px;
+          margin-top: 40px;
+        "
+      >
+        Done - <span id="doneCount">0</span>
+      </h3>
+      <div id="doneList"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
